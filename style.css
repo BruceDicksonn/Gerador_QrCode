@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --color-one: lightgreen;
     --color-two: skyblue;
@@ -10,14 +16,21 @@ body {
 }
 
 #app {
-    height: 95vh;
     flex-flow: column;
 }
 
 #app, 
+#app > div,
 #app > div > output {
     display: flex;
     align-items: center;
+}
+
+#app > div {
+    flex-flow: column nowrap;
+    padding: 8px;
+    margin: 30px;
+    background-color: red;
 }
 
 h1 {
@@ -27,14 +40,14 @@ h1 {
 }
 
 input,output {
-
     border-radius: 3px;
     margin: 15px;
 }
 
 input {
+    width: 100%;
     padding: 5px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 output {
@@ -42,4 +55,8 @@ output {
     justify-content: center;
     padding: 30px;
     background-color: rgb(89, 109, 128);
+}
+
+output img {
+    width: 100%;
 }
